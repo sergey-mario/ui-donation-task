@@ -9,7 +9,7 @@ export class PaymentOptionPage extends ClickMeFrame {
     constructor(page: Page) {
         super(page);
         this.page = page;
-        this.coverTransactionCostsCheckbox = this.mainFrame.locator('[data-qa="cover-fee-checkbox"]');
-        this.creditCardButton = this.mainFrame.locator('[data-qa="cc-button"]');
+        this.coverTransactionCostsCheckbox = this.clickMeFrame.locator('[data-qa="cover-fee-checkbox"]');
+        this.creditCardButton = this.clickMeFrame.locator('[data-qa="cc-button"]');
     }
 }

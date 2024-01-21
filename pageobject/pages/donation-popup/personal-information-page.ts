@@ -11,10 +11,10 @@ export class PersonalInformationPage extends ClickMeFrame{
     constructor(page: Page) {
         super(page);
         this.page = page;
-        this.firstNameInput = this.mainFrame.getByTestId('privacy-first-name-input');
-        this.lastNameInput = this.mainFrame.getByTestId('privacy-last-name-input');
-        this.emailInput = this.mainFrame.getByTestId('privacy-email-input');
-        this.donateButton = this.mainFrame.getByTestId('pay-button');
+        this.firstNameInput = this.clickMeFrame.getByTestId('privacy-first-name-input');
+        this.lastNameInput = this.clickMeFrame.getByTestId('privacy-last-name-input');
+        this.emailInput = this.clickMeFrame.getByTestId('privacy-email-input');
+        this.donateButton = this.clickMeFrame.getByTestId('pay-button');
     }
 
     async enterPersonalData(firstName: string, lastName: string, email: string) {

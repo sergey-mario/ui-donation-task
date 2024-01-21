@@ -8,6 +8,6 @@ export class CreditCardFrame extends ClickMeFrame{
     constructor(page: Page) {
         super(page);
         this.page = page;
-        this.creditFrame = this.mainFrame.frameLocator('[name^="__privateStripeFrame"]');
+        this.creditFrame = this.clickMeFrame.frameLocator('[name^="__privateStripeFrame"]');
     }
 }
