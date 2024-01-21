@@ -1,5 +1,5 @@
 import { Locator, Page } from '@playwright/test';
-import { CreditCardFrame } from './frames/creditCardFrame';
+import { CreditCardFrame } from './credit-card-frame';
 
 export class CreditCardPage extends CreditCardFrame {
     readonly page: Page;

@@ -1,7 +1,7 @@
 import { Locator, Page } from '@playwright/test';
-import { MainFrame } from './frames/mainFrame';
+import { ClickMeFrame } from '../click-me-page/click-me-frame';
 
-export class PaymentOptionPage extends MainFrame {
+export class PaymentOptionPage extends ClickMeFrame {
     readonly page: Page;
     readonly coverTransactionCostsCheckbox: Locator;
     readonly creditCardButton: Locator;

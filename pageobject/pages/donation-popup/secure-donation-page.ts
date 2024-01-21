@@ -1,7 +1,7 @@
 import { Locator, Page } from '@playwright/test';
-import { MainFrame } from './frames/mainFrame';
+import { ClickMeFrame } from '../click-me-page/click-me-frame';
 
-export class SecureDonationPage extends MainFrame {
+export class SecureDonationPage extends ClickMeFrame {
     readonly page: Page;
     readonly donationTypeButton: string;
     readonly currencySelector: Locator;

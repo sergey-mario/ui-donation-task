@@ -31,5 +31,8 @@
             "npm run eslint:fix",
             "npm run eslint"
         ]
+    },
+    "dependencies": {
+        "allure-playwright": "^2.11.1"
     }
 }

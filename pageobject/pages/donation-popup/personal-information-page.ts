@@ -1,7 +1,7 @@
 import { Locator, Page } from '@playwright/test';
-import { MainFrame } from './frames/mainFrame';
+import { ClickMeFrame } from '../click-me-page/click-me-frame';
 
-export class PersonalInformationPage extends MainFrame{
+export class PersonalInformationPage extends ClickMeFrame{
     readonly page: Page;
     readonly firstNameInput: Locator;
     readonly lastNameInput: Locator;

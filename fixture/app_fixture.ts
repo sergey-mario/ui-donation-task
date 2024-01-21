@@ -1,5 +1,5 @@
 import { test as base } from '@playwright/test';
-import { ClickMePage } from '../pageobject/pages/click-me-page';
+import { ClickMePage } from '../pageobject/pages/click-me-page/click-me-page';
 import { CreditCardPage } from '../pageobject/pages/donation-popup/credit-card-page';
 import { PaymentOptionPage } from '../pageobject/pages/donation-popup/payment-option-page';
 import { PersonalInformationPage } from '../pageobject/pages/donation-popup/personal-information-page';

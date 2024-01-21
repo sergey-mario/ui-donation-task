@@ -1,6 +1,6 @@
 import { FrameLocator, Page } from '@playwright/test';
 
-export class MainFrame {
+export class ClickMeFrame {
     readonly page: Page;
     readonly mainFrame: FrameLocator;
 
