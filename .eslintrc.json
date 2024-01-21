@@ -26,7 +26,10 @@
       "error",
       "never"
     ],
+    "comma-spacing": ["error", { "before": false, "after": true }],
     "implicit-arrow-linebreak": "off",
+    "max-len": ["error", { "code": 120 }],
+    "semi": ["error", "always"],
     "import/extensions": 0,
     "import/no-unresolved": 0,
     "import/prefer-default-export": 0,
@@ -36,6 +39,8 @@
         "devDependencies": true
       }
     ],
+    "object-curly-spacing": ["error", "always"],
+    "indent": ["error", 4],
     "no-await-in-loop": "off",
     "no-shadow": "off",
     "no-useless-constructor": "off",
