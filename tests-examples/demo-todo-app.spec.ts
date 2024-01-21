@@ -36,8 +36,8 @@ test.describe('New Todo', () => {
     })
 
     test('should clear text input field when an item is added', async ({
-                                                                           page
-                                                                       }) => {
+        page
+    }) => {
         // create a new todo locator
         const newTodo = page.getByPlaceholder('What needs to be done?')
 
@@ -51,8 +51,8 @@ test.describe('New Todo', () => {
     })
 
     test('should append new items to the bottom of the list', async ({
-                                                                         page
-                                                                     }) => {
+        page
+    }) => {
         // Create 3 items.
         await createDefaultTodos(page)
 
@@ -95,8 +95,8 @@ test.describe('Mark all as completed', () => {
     })
 
     test('should allow me to clear the complete state of all items', async ({
-                                                                                page
-                                                                            }) => {
+        page
+    }) => {
         const toggleAll = page.getByLabel('Mark all as complete')
         // Check and then immediately uncheck.
         await toggleAll.check()
@@ -107,8 +107,8 @@ test.describe('Mark all as completed', () => {
     })
 
     test('complete all checkbox should update state when items are completed / cleared', async ({
-                                                                                                    page
-                                                                                                }) => {
+        page
+    }) => {
         const toggleAll = page.getByLabel('Mark all as complete')
         await toggleAll.check()
         await expect(toggleAll).toBeChecked()
@@ -263,8 +263,8 @@ test.describe('Editing', () => {
     })
 
     test('should remove the item if an empty text string was entered', async ({
-                                                                                  page
-                                                                              }) => {
+        page
+    }) => {
         const todoItems = page.getByTestId('todo-item')
         await todoItems.nth(1).dblclick()
         await todoItems.nth(1).getByRole('textbox', { name: 'Edit' }).fill('')
@@ -293,8 +293,8 @@ test.describe('Editing', () => {
 
 test.describe('Counter', () => {
     test('should display the current number of todo items', async ({
-                                                                       page
-                                                                   }) => {
+        page
+    }) => {
         // create a new todo locator
         const newTodo = page.getByPlaceholder('What needs to be done?')
 
@@ -335,8 +335,8 @@ test.describe('Clear completed button', () => {
     })
 
     test('should be hidden when there are no items that are completed', async ({
-                                                                                   page
-                                                                               }) => {
+        page
+    }) => {
         await page.locator('.todo-list li .toggle').first().check()
         await page.getByRole('button', { name: 'Clear completed' }).click()
         await expect(
