@@ -8,7 +8,6 @@ export class SecureDonationPage extends ClickMeFrame {
     readonly priceInput: Locator;
     readonly donateButton: Locator;
 
-
     constructor(page: Page) {
         super(page);
         this.page = page;
