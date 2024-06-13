@@ -1,0 +1,20 @@
+name: Workflow Two
+
+on:
+  workflow_run:
+    workflows: ["Workflow One"]
+    types:
+      - completed
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Get timestamp
+        run: |
+          echo "TIMESTAMP=$(date -u +"%Y-%m-%d_%H-%M-%S")"
+
+      # Add your test steps here

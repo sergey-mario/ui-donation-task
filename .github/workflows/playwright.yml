@@ -27,9 +27,14 @@ jobs:
             - name: Run Playwright tests
               run: npx playwright test
 
+            - name: Get timestamp
+              if: always()
+              run: |
+                echo "TIMESTAMP=$(date -u +"%Y-%m-%d_%H-%M-%S")" >> $GITHUB_ENV
+
             - uses: actions/upload-artifact@v3
               if: always()
               with:
-                  name: playwright-report
+                  name: playwright-report-${{ env.TIMESTAMP }}
                   path: playwright-report/
                   retention-days: 30
