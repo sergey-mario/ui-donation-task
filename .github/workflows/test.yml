@@ -32,3 +32,6 @@ jobs:
 
       - name: Hello
         run: echo "Triggered by CI build"
+
+      - name: Hello
+        run: echo ${{ github.event.workflow_run }}
