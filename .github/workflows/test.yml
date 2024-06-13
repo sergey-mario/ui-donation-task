@@ -29,10 +29,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: feature/ci-test
 
-      - name: Hello
+      - name: step 1
         run: echo "Triggered by CI build"
 
-      - name: Hello
+      - name: step 2
         run: |
           echo ${{ github.event.workflow_run.check_suite_url }}
