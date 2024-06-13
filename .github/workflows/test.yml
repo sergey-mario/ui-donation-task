@@ -34,4 +34,5 @@ jobs:
         run: echo "Triggered by CI build"
 
       - name: Hello
-        run: echo ${{ github.event.workflow_run }}
+        run: |
+          echo ${{ github.event.workflow_run.check_suite_url }}
