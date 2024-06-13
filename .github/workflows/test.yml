@@ -38,3 +38,10 @@ jobs:
       - name: step 2
         run: |
           echo ${{ github.event.workflow_run.check_suite_url }}
+
+      - name: step 3
+        run: |
+          echo ${{ github.event.workflow_run.name }}
+          echo ${{ github.event.workflow_run.workflow_id }}
+          echo ${{ github.event.workflow_run.workflow_url }}
+          echo ${{ github.event.workflow_run.triggering_actor }}
