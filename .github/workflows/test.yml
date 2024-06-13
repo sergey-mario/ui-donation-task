@@ -1,0 +1,34 @@
+name: CI test
+
+on:
+  workflow_run:
+    workflows: ["CI build"]
+    types:
+      - completed
+
+jobs:
+  env:
+    runs-on: ubuntu-latest
+
+    outputs:
+      release-envs: ${{ steps.release-envs.outputs.release-envs }}
+
+    steps:
+      - name: Evaluate release environments
+        id: release-envs
+        run: |
+          echo "release-envs={\"environment\":[\"integration\",\"staging\"]}" >> "$GITHUB_OUTPUT"
+
+  test:
+    runs-on: ubuntu-latest
+    needs: env
+    strategy:
+      fail-fast: true
+      max-parallel: 1
+      matrix: ${{ fromJson(needs.env.outputs.release-envs) }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Hello
+        run: echo "Triggered by CI build"
